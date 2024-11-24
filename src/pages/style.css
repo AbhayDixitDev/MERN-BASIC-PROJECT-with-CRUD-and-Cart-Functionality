@@ -1,0 +1,131 @@
+
+    .shop-container,.card-container {
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+        padding: 5px;
+    }
+    .filter-column {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    .filter-select {
+        background-color: #333;
+        color: #f0f0f0;
+    }
+    .product-column {
+        height: 100vh;
+        overflow-y: auto;
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-card {
+        width: 12rem;
+        margin-top: 10px;
+        background-color: #333;
+        color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        transition: background-color 0.3s ease;
+        backdrop-filter: blur(5px);
+        height: 400px;
+    }
+    .product-card:hover {
+        background-color: rgba(51, 51, 51, 0.8);
+        height: 310px;
+    }
+    .product-image {
+        height: 150px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .card-details {
+        color: gray;
+        font-size: 12px;
+    }
+    .product-card:hover .card-details {
+        display: none;
+    }
+    .product-price {
+        color: red;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    .add-to-cart-btn {
+        background-color: #007bff;
+        border-color: #007bff;
+        font-size: 12px;
+        padding: 5px 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .product-card:hover .add-to-cart-btn {
+        opacity: 1;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    #carticon{
+                position: absolute;
+                top: -10px;
+                right: 10px;
+                padding: 5px;
+                font-size: 16px;
+                width: 20px;
+                height: 20px;
+                color: black !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    }
+
+/* Default light mode styles */
+body {
+    background-color: white;
+    color: black;
+  }
+  
+  #header {
+    background-color: #f8f9fa; /* Light background */
+    color: black; /* Light text */
+    padding: 10px;
+  }
+  
+  .space {
+    margin: 0 10px;
+  }
+  
+  #carticon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: white; /* Dark text */
+  }
+  
+  body.dark-mode #header {
+    background-color: #1e1e1e; /* Dark header background */
+    color: white; /* Dark header text */
+  }
+  
+  body.dark-mode #carticon {
+    background-color: #ff3b30; /* Bright red for cart icon in dark mode */
+  }
